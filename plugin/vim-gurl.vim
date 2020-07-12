@@ -23,7 +23,7 @@ function! Gurl()
 
   " String Setup
   let blob = "/blob/"
-  let sed_cmd = "sed 's\/git@\/https:\\/\\/\/g; s\/.git$\/\/g; s\/\.com:\/.com\\/\/g'"
+  let sed_cmd = "sed -E 's\/git@\/https:\\/\\/\/g; s\/.git$\/\/g; s\/\.(com|org|net|tech|co):\/.\\1\\/\/g'"
 
   " Get Directory & File Names
   let fullPath = expand("%:p")
